@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- to run client then use this code -->
+	<bean id="user" class="com.greatlearning.spring.beans.User">
+		<constructor-arg name="name" value="Ravish" />
+		<constructor-arg name="age" value="22" />
+		<property name="phoneNo">
+			<list>
+				<value>22222222222</value>
+				<value>33333333333</value>
+				<value>44444444444</value>
+				<value>55555555555</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- to run BeanScopeClient then use this code -->
+	<context:component-scan
+		base-package="com.greatlearning.spring"></context:component-scan>
+
+</beans>
